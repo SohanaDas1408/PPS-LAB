@@ -1,0 +1,13 @@
+# Function to check if the string is a palindrome
+def check_palindrome(input_string):
+    # Check if the string is equal to its reverse
+    if input_string == input_string[::-1]:
+        return "palindrome"
+    else:
+        return "not a palindrome"
+
+# Main program
+input_string = input( )  # Take input from the user
+result = check_palindrome(input_string)  # Check if the string is a palindrome
+print(result)  # Print the result
+
