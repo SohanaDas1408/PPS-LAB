@@ -1,0 +1,27 @@
+# Read marks for each subject from the user
+subject1 = float(input("subject 1: "))
+subject2 = float(input("subject 2: "))
+subject3 = float(input("subject 3: "))
+subject4 = float(input("subject 4: "))
+subject5 = float(input("subject 5: "))
+
+# Calculate the average marks
+average_marks = (subject1 + subject2 + subject3 + subject4 + subject5) / 5
+
+# Determine the grade based on the average marks
+if 90 <= average_marks <= 100:
+    grade = 'A'
+elif 80 <= average_marks < 90:
+    grade = 'B'
+elif 70 <= average_marks < 80:
+    grade = 'C'
+elif 60 <= average_marks < 70:
+    grade = 'D'
+else:
+    grade = 'F'
+
+# Display the average marks and the grade
+# Using format() to display the average marks with exactly two decimal places
+print(f"Average Marks: {average_marks:.2f}")
+print(f"Grade: {grade}")
+
