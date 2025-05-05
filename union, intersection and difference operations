@@ -1,0 +1,11 @@
+a = list(map(int,input("Set A: ").split()))
+A = set(a)
+b = list(map(int,input("Set B: ").split()))
+B = set(b)
+union=A|B
+inter=A&B
+diff=A-B
+print(f'Union:  {union}')
+print(f'Intersection:  {inter}')
+print(f'Difference:  {diff}')
+# Write your code here to perform different operations
