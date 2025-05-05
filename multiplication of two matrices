@@ -1,0 +1,36 @@
+def input_matrix(name):
+    print(f"Enter values for matrix - {name}")
+    m = int(input("Number of rows, m = "))
+    n = int(input("Number of columns, n = "))
+    matrix = []
+
+    for i in range(m):
+        row = []
+        for j in range(n):
+            val = int(input(f"Entry in row: {i + 1} column: {j + 1}\n"))
+            row.append(val)
+        matrix.append(row)
+
+    return matrix, m, n
+
+def multiply_matrices(A, B):
+    m1, n1 = len(A), len(A[0])
+    m2, n2 = len(B), len(B[0])
+
+    if n1 != m2:
+        return None
+
+    result = []
+    for i in range(m1):
+        row = []
+        for j in range(n2):
+            sum = 0
+            for k in range(n1):
+                sum += A[i][k] * B[k][j]
+            row.append(sum)
+        result.append(row)
+    return result
+
+# Input matrix A
+A, m1, n1 = input_matrix('A')
+
