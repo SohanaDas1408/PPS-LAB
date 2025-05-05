@@ -1,0 +1,17 @@
+# Function to calculate the sum of digits of a number
+def sum_of_digits(num):
+    # Initialize sum to 0
+    sum_digits = 0
+    
+    # Iterate through each digit in the number
+    for digit in str(num):
+        sum_digits += int(digit)
+    
+    # Return the sum of digits
+    return sum_digits
+
+# Main program
+num = int(input("num: "))  # Take input from the user
+result = sum_of_digits(num)  # Call the function to calculate the sum of digits
+print("sum:", result)  # Print the sum of digits
+
