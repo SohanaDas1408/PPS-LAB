@@ -1,0 +1,18 @@
+import string
+
+# Function to remove punctuation from the sentence
+def remove_punctuation(sentence):
+    # Create a translation table that maps punctuation to None
+    translation_table = str.maketrans('', '', string.punctuation)
+    
+    # Remove punctuation using translate()
+    modified_sentence = sentence.translate(translation_table)
+    
+    # Replace spaces with a non-breaking space for clean separation in the output
+    return modified_sentence
+
+# Main program
+sentence = input() # Take input from the user
+result = remove_punctuation(sentence)  # Remove punctuation
+print(result)  # Print the modified sentence
+
