@@ -1,0 +1,26 @@
+from datetime import datetime, timedelta
+
+# Function to check if the date is valid and increment it
+def check_and_increment_date(year, month, day):
+    try:
+        # Try to create a datetime object using the provided year, month, and day
+        current_date = datetime(year, month, day)
+        print("valid")
+        
+        # Increment the date by one day
+        incremented_date = current_date + timedelta(days=1)
+        
+        # Print the incremented date in the required format
+        print("incremented date:", incremented_date.strftime("%Y-%m-%d"))
+    except ValueError:
+        # If a ValueError occurs, it means the date is invalid
+        print("invalid")
+
+# Input year, month, and day
+year = int(input("year: "))
+month = int(input("month: "))
+day = int(input("day: "))
+
+# Call the function to check and increment the date
+check_and_increment_date(year, month, day)
+
