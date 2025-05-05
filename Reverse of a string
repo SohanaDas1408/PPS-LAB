@@ -1,0 +1,9 @@
+# Function to reverse a string
+def reverse_string(input_string):
+    return input_string[::-1]
+
+# Main program
+input_string = input( )  # Take input from the user
+reversed_string = reverse_string(input_string)  # Reverse the string
+print(reversed_string)  # Print the reversed string
+
