@@ -1,0 +1,24 @@
+import itertools
+
+# Function to check and generate combinations of the digits
+def generate_combinations(digit1, digit2, digit3):
+    # Check if all inputs are valid digits between 0 and 9
+    if all(0 <= int(digit) <= 9 for digit in [digit1, digit2, digit3]):
+        # Generate all permutations of the three digits
+        digits = [digit1, digit2, digit3]
+        permutations = itertools.permutations(digits)
+        
+        # Print each permutation as a combination
+        for perm in permutations:
+            print(''.join(perm))
+    else:
+        print("Invalid")
+
+# Prompt the user for three digits
+digit1 = input("digit1 (0-9): ")
+digit2 = input("digit2 (0-9): ")
+digit3 = input("digit3 (0-9): ")
+
+# Call the function to generate combinations
+generate_combinations(digit1, digit2, digit3)
+
